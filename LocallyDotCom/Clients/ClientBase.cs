@@ -9,6 +9,6 @@ namespace LocallyDotCom.Clients
             ApiConnection = connection;
         }
 
-        protected IApiConnection ApiConnection { get; private set; }
+        protected IApiConnection ApiConnection { get; }
     }
 }

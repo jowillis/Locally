@@ -8,11 +8,13 @@ namespace LocallyDotCom.Http
 {
     public class ApiConnection : IApiConnection
     {
-        public ApiConnection(string apiKey) : 
-            this(ApiUrls.Base, apiKey) { }
+        public ApiConnection(string apiKey) :
+            this(ApiUrls.Base, apiKey)
+        { }
 
-        public ApiConnection(Uri baseUri, string apiKey) : 
-            this(baseUri, apiKey, "LocallyDotCom/1.0") { }
+        public ApiConnection(Uri baseUri, string apiKey) :
+            this(baseUri, apiKey, "LocallyDotCom/1.0")
+        { }
 
         public ApiConnection(Uri baseUri, string apiKey, string userAgent)
         {
@@ -23,7 +25,7 @@ namespace LocallyDotCom.Http
             };
         }
 
-        public IRestClient RestClient { get; private set; }
+        public IRestClient RestClient { get; }
 
         public Task<T> Get<T>(Uri relativeUri) where T : new()
         {

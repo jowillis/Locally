@@ -13,10 +13,10 @@ namespace LocallyDotCom
             Categories = new CategoriesClient(connection);
         }
 
-        public BrandsClient Brands { get; private set; }
+        public BrandsClient Brands { get; }
 
-        public CatalogClient Catalog { get; private set; }
+        public CatalogClient Catalog { get; }
 
-        public CategoriesClient Categories { get; private set; }
+        public CategoriesClient Categories { get; }
     }
 }

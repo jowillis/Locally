@@ -4,28 +4,12 @@ namespace LocallyDotCom.Helpers
 {
     public static class ApiUrls
     {
-        private static readonly Uri BaseUri = new Uri("http://www.locally.com/api/v1/", UriKind.Absolute);
-        private static readonly Uri BrandsEndpoint = new Uri("brands", UriKind.Relative);
-        private static readonly Uri CatalogEndpoint = new Uri("catalog", UriKind.Relative);
-        private static readonly Uri CatagoriesEndpoint = new Uri("taxonomy", UriKind.Relative);
+        public static Uri Base { get; } = new Uri("http://www.locally.com/api/v1/", UriKind.Absolute);
 
-        public static Uri Base
-        {
-            get { return BaseUri; }
-        }
-        public static Uri Brands
-        {
-            get {  return BrandsEndpoint; }
-        }
+        public static Uri Brands { get; } = new Uri("brands", UriKind.Relative);
 
-        public static Uri Catalog
-        {
-            get { return CatalogEndpoint; }
-        }
+        public static Uri Catalog { get; } = new Uri("catalog", UriKind.Relative);
 
-        public static Uri Categories
-        {
-            get { return CatagoriesEndpoint; }
-        }
+        public static Uri Categories { get; } = new Uri("taxonomy", UriKind.Relative);
     }
 }
